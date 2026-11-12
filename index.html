@@ -29,7 +29,7 @@ var rede=fetch(API+'?acao=pagina&t='+Date.now()).then(function(r){if(!r.ok)throw
   try{localStorage.setItem(CK,t)}catch(e){}
   return t});
 function quando(f){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()}
-if(cache){quando(function(){abrir(cache)});rede.catch(function(){})}
+if(cache){quando(function(){abrir(cache)});rede.then(function(t){var ok=false;try{ok=localStorage.getItem(CK)===t}catch(e){}if(t!==cache&&ok)location.reload()}).catch(function(){})}
 else rede.then(function(t){quando(function(){abrir(t)})}).catch(function(){document.getElementById('m').textContent='Sem conexão. Tente de novo.'});
 })();
 </script>
