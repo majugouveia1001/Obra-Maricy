@@ -8,19 +8,19 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Obra Maricy">
-<link rel="apple-touch-icon" href="icon-180.png">
-<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="logo-180.png">
+<link rel="icon" href="logo-192.png">
 <link rel="manifest" href="manifest.json">
 <title>Obra CBE Maricy</title>
 <style>html,body{margin:0;height:100%;background:#f6f3ee;font:15px -apple-system,sans-serif;color:#8a857a}#c{height:100%;display:grid;place-items:center;text-align:center}#c img{width:72px;height:72px;border-radius:18px;display:block;margin:0 auto 12px}</style>
 </head>
 <body>
-<div id="c"><div><img src="icon-180.png" alt=""><span id="m">Abrindo a obra…</span></div></div>
+<div id="c"><div><img src="logo-180.png" alt=""><span id="m">Abrindo a obra…</span></div></div>
 <script>
 (function(){
 var API='https://script.google.com/macros/s/AKfycbxXmCF8DtkqBHjsZcog2pE4uMNFFsmrkD8jdb_2QawuHG7eJ8tyvNBinCOW_U8hcss/exec', CK='obra_pagina';
 function abrir(html){
-  html=html.replace(/<head([^>]*)>/i,'<head$1><script>window.OBRA_API='+JSON.stringify(API)+'<\/script><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.json">');
+  html=html.replace(/<head([^>]*)>/i,'<head$1><script>window.OBRA_API='+JSON.stringify(API)+'<\/script><link rel="apple-touch-icon" href="logo-180.png"><link rel="manifest" href="manifest.json">');
   document.open();document.write(html);document.close();
 }
 var cache=null;try{cache=localStorage.getItem(CK)}catch(e){}
